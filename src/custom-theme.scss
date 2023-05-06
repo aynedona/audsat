@@ -1,0 +1,23 @@
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+$audsat-primary: mat.define-palette(mat.$indigo-palette);
+$audsat-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$audsat-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$audsat-theme: mat.define-light-theme((
+  color: (
+    primary: $audsat-primary,
+    accent: $audsat-accent,
+    warn: $audsat-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($audsat-theme);
+
