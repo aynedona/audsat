@@ -1,0 +1,20 @@
+<div *ngIf="loading" class="col-12 spinner-align d-flex justify-content-center">
+  <mat-spinner></mat-spinner>
+</div>
+<mat-expansion-panel *ngFor="let post of postsUser" class="mb-3" [disabled]="clickButton" (click)="clickPost()">
+  <mat-expansion-panel-header>
+    <div class="d-flex flex-column">
+      <mat-panel-title class="f-16 fst-italic">
+        {{ post.title }}
+      </mat-panel-title>
+      <mat-panel-description class="f-14">
+        {{ post.body }}
+      </mat-panel-description>
+    </div>
+    <div class="d-flex align-items-center mx-3">
+      <button mat-raised-button color="accent" (click)="deletePost(post)">Apagar</button>
+    </div>
+  </mat-expansion-panel-header>
+
+  <app-posts-comments [postId]="post.id"></app-posts-comments>
+</mat-expansion-panel>

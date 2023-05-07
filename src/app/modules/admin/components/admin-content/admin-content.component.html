@@ -1,0 +1,10 @@
+<div class="container my-2">
+  <div class="row">
+    <h2 class="fst-italic">Lista de usuários</h2>
+  </div>
+  <app-filter-users (filterChange)="emitFilterChange($event)"></app-filter-users>
+  <div class="col-12 d-flex justify-content-center">
+    <mat-spinner *ngIf="loading"></mat-spinner>
+  </div>
+  <app-search-list [filteredData]="listUser"></app-search-list>
+</div>

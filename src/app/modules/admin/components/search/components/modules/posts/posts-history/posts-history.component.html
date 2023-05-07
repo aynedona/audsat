@@ -1,0 +1,8 @@
+<div class="container d-flex my-2 flex-md-row flex-sm-column flex-column">
+  <div class="col-md-4 col-sm-12 col-12 data-user">
+    <app-posts-user [user]="dataUser"></app-posts-user>
+  </div>
+  <div class="col-md-8 col-sm-12 col-12 mt-2 comments-posts">
+    <app-posts-list [userId]="dataUser.id"></app-posts-list>
+  </div>
+</div>

@@ -1,7 +1,31 @@
-<nav>
+<mat-icon class="d-md-none" (click)="menuOpened = !menuOpened">menu</mat-icon>
+
+<nav class="d-none d-md-block">
   <ul class="d-flex align-items-center m-0">
-    <li>Home</li>
-    <li>Admin</li>
-    <li>Logs</li>
+    <li>
+      <span (click)="navRouter('home')" [ngClass]="{'active': active == 'home' }">Home</span>
+    </li>
+    <li>
+      <span (click)="navRouter('admin')" [ngClass]="{'active': active == 'admin'}">Admin</span>
+    </li>
+    <li>
+      <span (click)="navRouter('logs')" [ngClass]="{'active': active == 'logs'}">Logs</span>
+    </li>
   </ul>
+</nav>
+
+<nav class="responsive d-md-none" [ngClass]="{'opacity-0': !menuOpened, 'opacity-1 opened': menuOpened}">
+  <div class="container d-flex justify-content-end">
+    <ul>
+      <li>
+        <span (click)="navRouter('home')" [ngClass]="{'active': active == 'home' }">Home</span>
+      </li>
+      <li>
+        <span (click)="navRouter('admin')" [ngClass]="{'active': active == 'admin'}">Admin</span>
+      </li>
+      <li>
+        <span (click)="navRouter('logs')" [ngClass]="{'active': active == 'logs'}">Logs</span>
+      </li>
+    </ul>
+  </div>
 </nav>

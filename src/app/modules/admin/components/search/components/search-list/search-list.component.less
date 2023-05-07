@@ -1,0 +1,32 @@
+@import '../../../../../../../assets/style/variables.less';
+
+.title-row-list-user {
+  color: @color-primary;
+}
+.mobile-label {
+  display: none;
+}
+
+@media (max-width: 991.98px) {
+  .mat-mdc-header-row {
+    display: none;
+  }
+  .mobile-label {
+    display: block;
+    margin-right: 5px;
+    font-weight: 500;
+  }
+  .mat-mdc-row {
+    display: flex;
+    flex-direction: column;
+    height: 110px;
+    border-bottom: 1px solid @color-tertiary;
+    padding: 10px 0;
+  }
+  .mat-mdc-cell {
+    display: flex;
+    height: 50px;
+    width: 100%;
+    border-bottom: none;
+  }
+}

@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./presentation.component.less']
 })
 export class PresentationComponent {
-  public name: String = 'Ayne Doná de Souza';
-  public date: String = '06/05/2023';
+  public name: string = 'Ayne Doná de Souza';
+  public date: string = '06/05/2023';
 }

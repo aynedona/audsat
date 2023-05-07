@@ -1,29 +1,29 @@
 export interface Users {
   id: number,
-  name: String,
-  username: String,
-  email: String,
+  name: string,
+  username: string,
+  email: string,
   address: Address,
-  phone: String,
-  website: String,
+  phone: string,
+  website: string,
   company: Company,
 }
 
 export interface Address {
-  street: String,
-  suite: String,
-  city: String,
-  zipcode: String,
+  street: string,
+  suite: string,
+  city: string,
+  zipcode: string,
   geo: GeoLocation
 }
 
 export interface GeoLocation {
-  lat: String,
-  lng: String
+  lat: string,
+  lng: string
 }
 
 export interface Company {
-  name: String,
-  catchPhrase: String,
-  bs: String,
+  name: string,
+  catchPhrase: string,
+  bs: string,
 }

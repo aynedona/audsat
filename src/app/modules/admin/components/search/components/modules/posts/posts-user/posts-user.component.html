@@ -1,0 +1,12 @@
+<section class="mt-1">
+  <p class="fst-italic"><strong>Dados do usuário:</strong></p>
+  <p>Nome: {{ user.name }}</p>
+  <p>E-mail: {{ user.email }}</p>
+  <p>Endereço:
+    <span>{{ user.address.street }}, </span>
+    <span>{{ user.address.suite }}. </span>
+    <span>{{ user.address.city }}. </span>
+    <span>{{ user.address.zipcode }}. </span>
+    <span>{{ user.address.geo.lat }}, {{ user.address.geo.lng }}</span>
+  </p>
+</section>

@@ -1,4 +1,4 @@
-const baseUrl = (): string => 'https://jsonplaceholder.typicode.com/';
+const baseUrl = (): string => 'https://jsonplaceholder.typicode.com';
 
 export const environment = {
   production: false,

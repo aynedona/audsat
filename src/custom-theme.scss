@@ -2,12 +2,76 @@
 
 @include mat.core();
 
-$audsat-primary: mat.define-palette(mat.$indigo-palette);
-$audsat-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$audsat-brand: (
+  50 : #e0e6e8,
+  100 : #b3c1c6,
+  200 : #8098a0,
+  300 : #4d6e79,
+  400 : #264f5d,
+  500 : #003040,
+  600 : #002b3a,
+  700 : #002432,
+  800 : #001e2a,
+  900 : #00131c,
+  A100 : #5ab7ff,
+  A200 : #27a1ff,
+  A400 : #0089f3,
+  A700 : #007ada,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #ffffff,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #ffffff,
+    A700 : #ffffff,
+  )
+);
+
+$audsat-green: (
+  50 : #e0efe7,
+  100 : #b3d7c4,
+  200 : #80bc9c,
+  300 : #4da174,
+  400 : #268c57,
+  500 : #007839,
+  600 : #007033,
+  700 : #00652c,
+  800 : #005b24,
+  900 : #004817,
+  A100 : #7cff98,
+  A200 : #49ff70,
+  A400 : #16ff48,
+  A700 : #00fc36,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+$audsat-primary: mat.define-palette($audsat-brand);
+$audsat-accent: mat.define-palette($audsat-green, 500, 900, A400);
 $audsat-warn: mat.define-palette(mat.$red-palette);
 
-// Create the theme object. A theme consists of configurations for individual
-// theming systems such as "color" or "typography".
 $audsat-theme: mat.define-light-theme((
   color: (
     primary: $audsat-primary,
@@ -16,8 +80,5 @@ $audsat-theme: mat.define-light-theme((
   )
 ));
 
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
 @include mat.all-component-themes($audsat-theme);
 

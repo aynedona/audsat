@@ -1,0 +1,42 @@
+.mat-mdc-raised-button {
+  &:hover, &:visited, &:focus {
+    background-color: @color-hover-button !important;
+  }
+}
+
+.mat-mdc-text-field-wrapper.mdc-text-field--outlined {
+  .mat-mdc-form-field-infix {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    min-height: 30px;
+  }
+}
+
+.mat-mdc-table {
+  .mat-mdc-row {
+    &:nth-child(odd) {
+      background-color: @color-striped;
+    }
+    &:hover {
+      background-color: @color-hover-table !important;
+      cursor: pointer;
+    }
+
+    .mdc-data-table__header-cell {
+      color: @color-primary;
+    }
+  }
+}
+
+.mat-expansion-panel {
+  .mat-expansion-panel-header {
+    &:hover {
+      background: @color-striped !important;
+    }
+    &.mat-expanded {
+      background: lighten(@color-striped, 2%) !important;
+    }
+  }
+}
+
+
